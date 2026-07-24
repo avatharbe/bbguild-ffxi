@@ -1,7 +1,7 @@
 # bbGuild - Final Fantasy XI
 [![Tests](https://github.com/avatharbe/bbguildffxi/actions/workflows/tests.yml/badge.svg)](https://github.com/avatharbe/bbguildffxi/actions/workflows/tests.yml)
 
-Game plugin that adds Final Fantasy XI support to [bbGuild](https://github.com/avandenberghe/bbguild).
+Game plugin that adds Final Fantasy XI support to [bbGuild](https://github.com/avatharbe/bbguild).
 
 ## Features
 
@@ -15,7 +15,7 @@ Game plugin that adds Final Fantasy XI support to [bbGuild](https://github.com/a
 ## Requirements
 
 - phpBB >= 3.3.0
-- PHP >= 7.4.0
+- PHP >= 8.1.0
 - **bbGuild core** (`avathar/bbguild`) must be installed and enabled
 
 ## Installation
@@ -81,6 +81,6 @@ Unknown, Hume, Elvaan, Tarutaru, Mithra, Galka
 
 ## Links
 
-- [bbGuild Core](https://github.com/avandenberghe/bbguild)
+- [bbGuild Core](https://github.com/avatharbe/bbguild)
 - [FFXI Allakhazam](http://ffxi.allakhazam.com/)
-- [Issue Tracker](https://github.com/avandenberghe/bbguild/issues)
+- [Issue Tracker](https://github.com/avatharbe/bbguildffxi/issues)
