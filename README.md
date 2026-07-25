@@ -1,4 +1,7 @@
 # bbGuild - Final Fantasy XI
+
+**Current version:** 2.0.0-rc1 (release candidate)
+
 [![Tests](https://github.com/avatharbe/bbguildffxi/actions/workflows/tests.yml/badge.svg)](https://github.com/avatharbe/bbguildffxi/actions/workflows/tests.yml)
 
 Final Fantasy XI is notorious for making almost nothing soloable — endgame content demanded a coordinated linkshell, not just a list of names, and that coordination is exactly what a guild management tool should make easier. bbguildffxi covers all 21 jobs and 6 races, the four nations (Bastok, San d'Oria, Windurst, Jueno), and US/EU/JP regions, with boss/zone links straight to FFXI Allakhazam. If your linkshell still runs on an old forum thread and a shared spreadsheet, this gives it an actual roster, recruitment board, and character claiming instead.
