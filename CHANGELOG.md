@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0-rc2 25/07/2026
+  - [NEW] Added the two Seekers of Adoulin (2013) jobs missing from the seed: Geomancer and Rune Fencer, with en/fr/de names.
+  - [CHG] Bumped every job's level cap 75 → 99 (current cap).
+  - [FIX] Corrected the "Jueno" faction name to "Jeuno", and fixed the README Jobs-table IDs to match the installer. (#1)
+
 ## 2.0.0-rc1 24/07/2026
   - [FIX] Migration dependency pointed at a since-removed bbguild core migration path (`basics\schema`, squashed into `v200b3` in an earlier core release) — this plugin could not install at all against current core
   - [FIX] `get_table_names()` was missing `bb_specializations_table`, which would have silently blocked any future specialization seeding (issue #331 Phase 4)
