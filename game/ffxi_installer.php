@@ -16,7 +16,7 @@ use avathar\bbguild\model\games\abstract_game_install;
 class ffxi_installer extends abstract_game_install
 {
 	/**
-	 * Installs FFXI factions (Bastok, San d'Oria, Windurst, Jueno)
+	 * Installs FFXI factions (Bastok, San d'Oria, Windurst, Jeuno)
 	 */
 	protected function install_factions()
 	{
@@ -26,7 +26,7 @@ class ffxi_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 1, 'faction_name' => 'Bastok');
 		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 2, 'faction_name' => 'San d\'Oria');
 		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 3, 'faction_name' => 'Windurst');
-		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 4, 'faction_name' => 'Jueno');
+		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 4, 'faction_name' => 'Jeuno');
 		$this->db->sql_multi_insert($this->table('bb_factions_table'), $sql_ary);
 	}
 
@@ -38,27 +38,29 @@ class ffxi_installer extends abstract_game_install
 
 		$this->db->sql_query('DELETE FROM ' . $this->table('bb_classes_table') . " WHERE game_id = '" . $this->db->sql_escape($this->game_id) . "'");
 		$sql_ary = array();
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 0,  'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_unknown');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 1,  'class_armor_type' => 'PLATE',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_warrior');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 2,  'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_monk');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 3,  'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_thief');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 4,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_white_mage');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 5,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_black_mage');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 6,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_blue_mage');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 7,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_red_mage');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 8,  'class_armor_type' => 'PLATE',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_paladin');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 9,  'class_armor_type' => 'PLATE',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_dark_knight');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 10, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_dragoon');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 11, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_ninja');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 12, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_samurai');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 13, 'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_summoner');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 14, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_ranger');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 15, 'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_dancer');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 16, 'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_scholar');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 17, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_corsair');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 18, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_bard');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 19, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_beastmaster');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 20, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 75, 'imagename' => 'ffxi_puppetmaster');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 0,  'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_unknown');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 1,  'class_armor_type' => 'PLATE',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_warrior');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 2,  'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_monk');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 3,  'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_thief');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 4,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_white_mage');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 5,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_black_mage');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 6,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_blue_mage');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 7,  'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_red_mage');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 8,  'class_armor_type' => 'PLATE',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_paladin');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 9,  'class_armor_type' => 'PLATE',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_dark_knight');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 10, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_dragoon');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 11, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_ninja');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 12, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_samurai');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 13, 'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_summoner');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 14, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_ranger');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 15, 'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_dancer');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 16, 'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_scholar');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 17, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_corsair');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 18, 'class_armor_type' => 'MAIL',    'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_bard');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 19, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_beastmaster');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 20, 'class_armor_type' => 'LEATHER', 'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_puppetmaster');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 21, 'class_armor_type' => 'CLOTH',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_geomancer');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 22, 'class_armor_type' => 'PLATE',   'class_min_level' => 1, 'class_max_level' => 99, 'imagename' => 'ffxi_rune_fencer');
 		$this->db->sql_multi_insert($this->table('bb_classes_table'), $sql_ary);
 		unset($sql_ary);
 
@@ -88,6 +90,8 @@ class ffxi_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 18, 'language' => 'en', 'attribute' => 'class', 'name' => 'Bard',         'name_short' => 'Bard');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 19, 'language' => 'en', 'attribute' => 'class', 'name' => 'Beastmaster',  'name_short' => 'Beastmaster');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 20, 'language' => 'en', 'attribute' => 'class', 'name' => 'Puppetmaster', 'name_short' => 'Puppetmaster');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 21, 'language' => 'en', 'attribute' => 'class', 'name' => 'Geomancer',    'name_short' => 'Geomancer');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 22, 'language' => 'en', 'attribute' => 'class', 'name' => 'Rune Fencer',  'name_short' => 'Rune Fencer');
 
 		// fr
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 0,  'language' => 'fr', 'attribute' => 'class', 'name' => 'Unknown',      'name_short' => 'Unknown');
@@ -111,6 +115,8 @@ class ffxi_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 18, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Bard',         'name_short' => 'Bard');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 19, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Beastmaster',  'name_short' => 'Beastmaster');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 20, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Puppetmaster', 'name_short' => 'Puppetmaster');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 21, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Geomancer',    'name_short' => 'Geomancer');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 22, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Rune Fencer',  'name_short' => 'Rune Fencer');
 
 		// de
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 0,  'language' => 'de', 'attribute' => 'class', 'name' => 'Unknown',      'name_short' => 'Unknown');
@@ -134,6 +140,8 @@ class ffxi_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 18, 'language' => 'de', 'attribute' => 'class', 'name' => 'Bard',         'name_short' => 'Bard');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 19, 'language' => 'de', 'attribute' => 'class', 'name' => 'Beastmaster',  'name_short' => 'Beastmaster');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 20, 'language' => 'de', 'attribute' => 'class', 'name' => 'Puppetmaster', 'name_short' => 'Puppetmaster');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 21, 'language' => 'de', 'attribute' => 'class', 'name' => 'Geomancer',    'name_short' => 'Geomancer');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 22, 'language' => 'de', 'attribute' => 'class', 'name' => 'Rune Fencer',  'name_short' => 'Rune Fencer');
 
 		$this->db->sql_multi_insert($this->table('bb_language_table'), $sql_ary);
 	}

@@ -4,13 +4,13 @@
 
 [![Tests](https://github.com/avatharbe/bbguildffxi/actions/workflows/tests.yml/badge.svg)](https://github.com/avatharbe/bbguildffxi/actions/workflows/tests.yml)
 
-Final Fantasy XI is notorious for making almost nothing soloable — endgame content demanded a coordinated linkshell, not just a list of names, and that coordination is exactly what a guild management tool should make easier. bbguildffxi covers all 21 jobs and 6 races, the four nations (Bastok, San d'Oria, Windurst, Jueno), and US/EU/JP regions, with boss/zone links straight to FFXI Allakhazam. If your linkshell still runs on an old forum thread and a shared spreadsheet, this gives it an actual roster, recruitment board, and character claiming instead.
+Final Fantasy XI is notorious for making almost nothing soloable — endgame content demanded a coordinated linkshell, not just a list of names, and that coordination is exactly what a guild management tool should make easier. bbguildffxi covers all 22 jobs and 5 races, the four nations (Bastok, San d'Oria, Windurst, Jeuno), and US/EU/JP regions, with boss/zone links straight to FFXI Allakhazam. If your linkshell still runs on an old forum thread and a shared spreadsheet, this gives it an actual roster, recruitment board, and character claiming instead.
 
 ## Features
 
-- **FFXI Jobs** - 21 jobs (Warrior, Monk, White Mage, Black Mage, Red Mage, Thief, Paladin, Dark Knight, Beastmaster, Bard, Ranger, Samurai, Ninja, Dragoon, Summoner, Blue Mage, Corsair, Puppetmaster, Dancer, Scholar)
-- **FFXI Races** - 6 playable races (Hume, Elvaan, Tarutaru, Mithra, Galka)
-- **Nations** - 4 nations: Bastok, San d'Oria, Windurst, Jueno
+- **FFXI Jobs** - 22 jobs (Warrior, Monk, White Mage, Black Mage, Red Mage, Thief, Paladin, Dark Knight, Beastmaster, Bard, Ranger, Samurai, Ninja, Dragoon, Summoner, Blue Mage, Corsair, Puppetmaster, Dancer, Scholar, Geomancer, Rune Fencer)
+- **FFXI Races** - 5 playable races (Hume, Elvaan, Tarutaru, Mithra, Galka)
+- **Nations** - 4 nations: Bastok, San d'Oria, Windurst, Jeuno
 - **Localization** - Job and race names in English, French, and German
 - **Regions** - US, EU, and JP server regions
 - **Allakhazam Links** - Boss and zone database URLs linked to FFXI Allakhazam
@@ -46,35 +46,37 @@ Final Fantasy XI is notorious for making almost nothing soloable — endgame con
 | 1 | Bastok |
 | 2 | San d'Oria |
 | 3 | Windurst |
-| 4 | Jueno |
+| 4 | Jeuno |
 
-### Jobs (21)
+### Jobs (22)
 
 | ID | Job |
 |----|-----|
 | 0 | Unknown |
 | 1 | Warrior |
 | 2 | Monk |
-| 3 | White Mage |
-| 4 | Black Mage |
-| 5 | Red Mage |
-| 6 | Thief |
-| 7 | Paladin |
-| 8 | Dark Knight |
-| 9 | Beastmaster |
-| 10 | Bard |
-| 11 | Ranger |
+| 3 | Thief |
+| 4 | White Mage |
+| 5 | Black Mage |
+| 6 | Blue Mage |
+| 7 | Red Mage |
+| 8 | Paladin |
+| 9 | Dark Knight |
+| 10 | Dragoon |
+| 11 | Ninja |
 | 12 | Samurai |
-| 13 | Ninja |
-| 14 | Dragoon |
-| 15 | Summoner |
-| 16 | Blue Mage |
+| 13 | Summoner |
+| 14 | Ranger |
+| 15 | Dancer |
+| 16 | Scholar |
 | 17 | Corsair |
-| 18 | Puppetmaster |
-| 19 | Dancer |
-| 20 | Scholar |
+| 18 | Bard |
+| 19 | Beastmaster |
+| 20 | Puppetmaster |
+| 21 | Geomancer |
+| 22 | Rune Fencer |
 
-### Races (6)
+### Races (5)
 
 Unknown, Hume, Elvaan, Tarutaru, Mithra, Galka
 
